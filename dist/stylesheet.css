@@ -1,0 +1,69 @@
+@keyframes openclose-eye {
+
+    0%{
+        background-image: url(../src/images/eye-open.png);
+    }
+
+    50%{
+
+        background-image: url(../src/images/eye-closed.png)
+    }
+
+    100%{
+
+        background-image: url(../src/images/eye-open.png);
+    }
+    
+}
+body{
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../src/images/main.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#searchContainer{
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 3%;
+    margin-top: 20px;
+
+}
+#searchBox{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    height: 100%;
+    border-radius: 50px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.651);
+    border: 3px solid rgba(230, 230, 230, 0.733);
+    padding-left: 13px;
+    padding-right: 10px;
+
+}
+
+#searchBar{
+
+    width: 80%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.eyes{
+    animation: openclose-eye 1s ;
+}
+#eye{
+
+    width: 5%;
+    height: 80%;
+    margin-top: 0.3%;
+    background-image: url(../src/images/eye-open.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
