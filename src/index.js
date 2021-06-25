@@ -16,6 +16,8 @@ eyesSearch.addEventListener('click', function () {
         console.log(answer)}})
         .catch(error => console.log(error));
 
+        searchBar.value = "";
+
 
 
 
