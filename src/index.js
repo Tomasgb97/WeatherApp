@@ -1,21 +1,33 @@
 import apicalls from "./apicalls";
+import DOM from "./DOM";
+
+let searchValue;
+
+const eyesSearch = document.getElementById('eye');
+const searchBar = document.getElementById('searchBar');
 
 
-const eyesSearch = document.getElementById('eye')
-
-apicalls.getData();
-console.log('hola');
-
-eyesSearch.addEventListener('click', function(){
+eyesSearch.addEventListener('click', function () {
 
     eyesSearch.classList.add('eyes');
 
+    apicalls.getData(searchValue)
+        .then(function (answer){if(answer.cod != 400){DOM.createElements(answer)
+        console.log(answer)}})
+        .catch(error => console.log(error));
 
-    
+
+
+
 });
 
-eyesSearch.addEventListener('animationend', function(){
+eyesSearch.addEventListener('animationend', function () {
 
     eyesSearch.classList.remove('eyes');
-    console.log('transition ended')
+    console.log('animation ended')
+})
+
+searchBar.addEventListener('input', function(){
+
+    searchValue = searchBar.value;
 })
